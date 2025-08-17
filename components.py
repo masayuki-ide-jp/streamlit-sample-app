@@ -45,6 +45,7 @@ def display_select_mode():
             label_visibility="collapsed",
             # 必要ならデフォルト選択を指定: index=0,
         )
+        st.divider()
         # 「社内文書検索」の機能説明
         st.markdown("**【「社内文書検索」を選択した場合】**")
         # 「st.info()」を使うと青枠で表示される
