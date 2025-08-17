@@ -45,15 +45,6 @@ def display_select_mode():
             label_visibility="collapsed",
             # 必要ならデフォルト選択を指定: index=0,
         )
-
-def display_initial_ai_message():
-    """
-    AIメッセージの初期表示
-    """
-    with st.chat_message("assistant"):
-        # 「st.success()」とすると緑枠で表示される
-        st.markdown("こんにちは。私は社内文書の情報をもとに回答する生成AIチャットボットです。上記で利用目的を選択し、画面下部のチャット欄からメッセージを送信してください。")
-
         # 「社内文書検索」の機能説明
         st.markdown("**【「社内文書検索」を選択した場合】**")
         # 「st.info()」を使うと青枠で表示される
@@ -66,6 +57,16 @@ def display_initial_ai_message():
         st.markdown("**【「社内問い合わせ」を選択した場合】**")
         st.info("質問・要望に対して、社内文書の情報をもとに回答を得られます。")
         st.code("【入力例】\n人事部に所属している従業員情報を一覧化して", wrap_lines=True, language=None)
+
+
+def display_initial_ai_message():
+    """
+    AIメッセージの初期表示
+    """
+    with st.chat_message("assistant"):
+        # 「st.success()」とすると緑枠で表示される
+        st.markdown("こんにちは。私は社内文書の情報をもとに回答する生成AIチャットボットです。上記で利用目的を選択し、画面下部のチャット欄からメッセージを送信してください。")
+
 
 
 def display_conversation_log():
